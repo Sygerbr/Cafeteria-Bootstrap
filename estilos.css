@@ -1,0 +1,82 @@
+body {
+  --bege: #E6E0D6;
+  --marrom-escuro: #816D4F;
+  --marrom-claro: #B29463;
+  --fonte-primaria: 'Barlow', sans-serif;
+  height: 4000px;
+}
+
+input[type=checkbox] {
+  border: 2px solid var(--marrom-claro);
+  box-shadow: none;
+}
+
+/* aqui estamos estilizando e padronizando todos os checkbox */
+
+input[type=checkbox]:checked,
+input[type="checkbox"]:focus {
+  background-color: var(--marrom-claro);
+  border-color: var(--marrom-claro);
+  box-shadow: none;
+  outline: none;
+}
+
+.banner-1 {
+  background-image: url(assets/banner-1.png);
+}
+
+.banners {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* aqui usei cover para a imagem completar toda a largura da tela*/
+  background-position: center;
+  background-attachment: fixed; 
+  /* aqui usamos tachment: fixed para a imagem ficar fixa no topo e ser tampada quando descemos a barra de rolagem da tela "PARALLAX" */
+}
+
+.banners-titulo {
+  --bs-bg-opacity: .2;
+  /* aqui se usa esse variável para deixar transparente */
+}
+
+.cor_icones {
+  background-color: var(--marrom-claro);
+  color: #000000
+}
+
+.banner-2 {
+  background-image: url(assets/banner-2.png);
+}
+
+.banner-3 {
+  background-image: url(assets/banner-3.png);
+}
+
+
+.border-color {
+  border-color: var(--marrom-claro);
+}
+
+.input-range::-webkit-slider-thumb {
+  background-color: var(--marrom-claro);
+}
+
+.footer_color {
+  background-color: var(--marrom-claro);
+}
+
+/* aqui colocamos o data-bs-theme com [] que esta no body com valor white para tirar o cinza padrão e vamos usar nos outros elementos que já vem por padrão do bootstrap com cores e substituir*/
+
+[data-bs-theme="dark"] {
+  color: white;
+  .nav-link, .card-body, .offcanvas, .accordion, .btn{
+    --bs-nav-link-color: white;
+    --bs-card-color: white;
+    --bs-offcanvas-color: white;
+    --bs-body-color: white;
+    --bs-body-color: white;
+  }
+   
+}
